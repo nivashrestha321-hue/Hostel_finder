@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+/* Category Filter */
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #667eea;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Main Content */
+main {
+    padding: 30px 0 60px;
+}
+
+/* Category Section */
+.category-section {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Hostel Grid */
+.hostel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Hostel Card */
+.hostel-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.hostel-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.hostel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hostel-icon {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.hostel-name {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hostel-info {
+    margin: 10px 0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-icon {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.rating {
+    color: #ffa500;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.3em;
+    color: #667eea;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.facilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.facility-tag {
+    background: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    color: #555;
+}
+
+.category-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+}
+
+/* Admin Button */
+.admin-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.admin-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    padding: 50px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .hostel-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+}
